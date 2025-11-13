@@ -10,8 +10,8 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 15) {
                         Text("About")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundStyle(.black)
-                        
+                            .foregroundStyle(.brownMain)
+
                         Text("FragranceBox")
                             .font(.system(size: 18, weight: .medium))
                             .foregroundStyle(.brownMain)
@@ -26,8 +26,8 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 15) {
                         Text("Statistics")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundStyle(.black)
-                        
+                            .foregroundStyle(.brownMain)
+
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("\(userService.fragrances.count)")
@@ -58,7 +58,7 @@ struct SettingsView: View {
                         Text("Reset All Data")
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundStyle(.white)
-                            .colorFramed(color: .red)
+                            .colorFramed(color: .greenMain)
                     }
                 }
                 .padding(.horizontal, 20)

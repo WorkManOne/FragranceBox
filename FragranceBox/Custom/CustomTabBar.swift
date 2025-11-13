@@ -22,7 +22,7 @@ struct CustomTabBar: View {
         .background(
             ZStack (alignment: .top) {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(.white)
+                    .fill(.lightBrownMain)
                 Rectangle()
                     .fill(.lightBrownMain)
                     .frame(height: 1)

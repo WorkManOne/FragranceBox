@@ -31,7 +31,7 @@ struct FragrancePreviewView: View {
                     VStack (alignment: .leading, spacing: 8) {
                         Text(fragrance.name)
                             .font(.system(size: 18, weight: .semibold))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                             .multilineTextAlignment(.leading)
 
                         Text(fragrance.brand)

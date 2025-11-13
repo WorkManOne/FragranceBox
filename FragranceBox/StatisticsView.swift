@@ -36,8 +36,8 @@ struct StatisticsView: View {
                     VStack(alignment: .leading, spacing: 15) {
                         Text("Overview")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundStyle(.black)
-                        
+                            .foregroundStyle(.brownMain)
+
                         HStack(spacing: 15) {
                             VStack(alignment: .leading, spacing: 8) {
                                 Text("\(userService.fragrances.count)")
@@ -66,8 +66,8 @@ struct StatisticsView: View {
                     VStack(alignment: .leading, spacing: 15) {
                         Text("Layering Lab")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundStyle(.black)
-                        
+                            .foregroundStyle(.brownMain)
+
                         HStack(spacing: 15) {
                             VStack(alignment: .leading, spacing: 8) {
                                 Text("\(totalLayeringRecipes)")
@@ -96,12 +96,12 @@ struct StatisticsView: View {
                     VStack(alignment: .leading, spacing: 15) {
                         Text("Preferences")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundStyle(.black)
-                        
+                            .foregroundStyle(.brownMain)
+
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Average Rating")
                                 .font(.system(size: 16, weight: .medium))
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.brownMain)
                             HStack(spacing: 4) {
                                 Text("\(averageRating, format: .number.precision(.fractionLength(1)))")
                                     .font(.system(size: 24, weight: .bold))
@@ -119,7 +119,7 @@ struct StatisticsView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Favorite Season")
                                 .font(.system(size: 16, weight: .medium))
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.brownMain)
                             Text(mostUsedSeason.rawValue)
                                 .font(.system(size: 20, weight: .semibold))
                                 .foregroundStyle(.greenMain)
@@ -130,7 +130,7 @@ struct StatisticsView: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("Most Common Note")
                                 .font(.system(size: 16, weight: .medium))
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.brownMain)
                             Text(mostCommonNote.rawValue)
                                 .font(.system(size: 20, weight: .semibold))
                                 .foregroundStyle(.greenMain)

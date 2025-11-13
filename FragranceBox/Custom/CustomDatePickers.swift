@@ -15,7 +15,7 @@ struct CustomDatePickerSheet: View {
             VStack(spacing: 0) {
                 Text("Select Date")
                     .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(.black)
+                    .foregroundColor(.brownMain)
                     .padding(.top, 30)
                 Spacer()
                 DatePicker(
@@ -25,7 +25,7 @@ struct CustomDatePickerSheet: View {
                 )
                 .datePickerStyle(.wheel)
                 .labelsHidden()
-                .colorScheme(.light)
+                .colorScheme(.dark)
                 Spacer()
                 Button {
                     dismiss()
@@ -43,7 +43,7 @@ struct CustomDatePickerSheet: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                .white
+                .backgroundMain
             )
         }
         .presentationDetents([.medium])

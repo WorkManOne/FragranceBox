@@ -7,7 +7,7 @@ struct FragranceBoxApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(userService)
-                .preferredColorScheme(.light)
+                .preferredColorScheme(.dark)
         }
     }
 }

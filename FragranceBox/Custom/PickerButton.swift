@@ -24,7 +24,7 @@ struct NotePickerButton: View {
                     .foregroundStyle(.brownMain)
                 Text(note.rawValue)
                     .font(.system(size: 14, weight: .medium))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.brownMain)
             }
             .padding(.vertical, 12)
             .padding(.horizontal, 12)
@@ -59,7 +59,7 @@ struct WearTimePickerButton: View {
         } label: {
             Text(wearTime.rawValue)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundStyle(wearTimeArray.contains(wearTime) ? .white : .black)
+                .foregroundStyle(wearTimeArray.contains(wearTime) ? .white : .white)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 16)
                 .background {
@@ -86,7 +86,7 @@ struct WearPlacePickerButton: View {
         } label: {
             Text(wearPlace.rawValue)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundStyle(wearPlaceArray.contains(wearPlace) ? .white : .black)
+                .foregroundStyle(wearPlaceArray.contains(wearPlace) ? .white : .white)
                 .padding(.vertical, 12)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background {
@@ -109,7 +109,7 @@ struct SeasonPickerButton: View {
         } label: {
             Text(season.rawValue)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundStyle(selectedSeason == season ? .white : .black)
+                .foregroundStyle(selectedSeason == season ? .white : .white)
                 .padding(.vertical, 12)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background {

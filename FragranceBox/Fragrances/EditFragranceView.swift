@@ -28,7 +28,7 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 20) {
                         Text("Fragrance Photo")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         Button {
                             showSourceSheet = true
                         } label: {
@@ -44,7 +44,7 @@ struct EditFragranceView: View {
                                         )
                                     Text("Add a photo")
                                         .font(.system(size: 16, weight: .medium))
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.brownMain)
                                     Text("Tap to upload image")
                                         .font(.system(size: 14, weight: .regular))
                                         .foregroundStyle(.brownMain)
@@ -81,30 +81,30 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 10) {
                         Text("Fragrance Name")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         TextField("", text: $fragrance.name, prompt: Text("Enter fragrance name").foregroundColor(.gray))
                             .font(.system(size: 16, weight: .regular))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                             .darkFramed()
                     }
                     
                     VStack (alignment: .leading, spacing: 10) {
                         Text("Brand")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         TextField("", text: $fragrance.brand, prompt: Text("Enter brand name").foregroundColor(.gray))
                             .font(.system(size: 16, weight: .regular))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                             .darkFramed()
                     }
                     
                     VStack (alignment: .leading, spacing: 10) {
                         Text("Description")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         TextField("", text: $fragrance.description, prompt: Text("Enter description").foregroundColor(.gray), axis: .vertical)
                             .font(.system(size: 16, weight: .regular))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                             .lineLimit(3...6)
                             .darkFramed()
                     }
@@ -112,7 +112,7 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 15) {
                         Text("Top Notes")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                             ForEach(NoteType.allCases, id: \.self) { note in
                                 NotePickerButton(noteArray: $fragrance.topNotes, note: note, noteCategory: .top)
@@ -123,7 +123,7 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 15) {
                         Text("Heart Notes")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                             ForEach(NoteType.allCases, id: \.self) { note in
                                 NotePickerButton(noteArray: $fragrance.heartNotes, note: note, noteCategory: .heart)
@@ -134,7 +134,7 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 15) {
                         Text("Base Notes")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                             ForEach(NoteType.allCases, id: \.self) { note in
                                 NotePickerButton(noteArray: $fragrance.baseNotes, note: note, noteCategory: .base)
@@ -145,7 +145,7 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 15) {
                         Text("When to Wear")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         HStack {
                             ForEach(WearTime.allCases, id: \.self) { time in
                                 WearTimePickerButton(wearTimeArray: $fragrance.whenToWear, wearTime: time)
@@ -156,7 +156,7 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 15) {
                         Text("Where to Wear")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                             ForEach(WearPlace.allCases, id: \.self) { place in
                                 WearPlacePickerButton(wearPlaceArray: $fragrance.whereToWear, wearPlace: place)
@@ -167,7 +167,7 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 15) {
                         Text("Season")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                             ForEach(Season.allCases, id: \.self) { season in
                                 SeasonPickerButton(selectedSeason: $fragrance.season, season: season)
@@ -178,16 +178,16 @@ struct EditFragranceView: View {
                     VStack (alignment: .leading, spacing: 15) {
                         Text("Bottle Information")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
-                        
+                            .foregroundStyle(.brownMain)
+
                         HStack(spacing: 15) {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text("Bottle Size (ml)")
                                     .font(.system(size: 14, weight: .medium))
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(.brownMain)
                                 TextField("", value: $fragrance.bottleSize, format: .number, prompt: Text("100").foregroundColor(.gray))
                                     .font(.system(size: 16, weight: .regular))
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(.brownMain)
                                     .keyboardType(.decimalPad)
                                     .darkFramed()
                             }
@@ -195,10 +195,10 @@ struct EditFragranceView: View {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text("Remaining (%)")
                                     .font(.system(size: 14, weight: .medium))
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(.brownMain)
                                 TextField("", value: $fragrance.remainingAmount, format: .number, prompt: Text("100").foregroundColor(.gray))
                                     .font(.system(size: 16, weight: .regular))
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(.brownMain)
                                     .keyboardType(.decimalPad)
                                     .darkFramed()
                             }
@@ -209,7 +209,7 @@ struct EditFragranceView: View {
                         HStack {
                             Text("Rating")
                                 .font(.system(size: 16, weight: .medium))
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.brownMain)
                             Spacer()
                             HStack(spacing: 4) {
                                 ForEach(1...5, id: \.self) { index in
@@ -218,7 +218,7 @@ struct EditFragranceView: View {
                                     } label: {
                                         Image(systemName: index <= fragrance.rating ? "star.fill" : "star")
                                             .font(.system(size: 20, weight: .medium))
-                                            .foregroundStyle(index <= fragrance.rating ? .greenMain : .lightBrownMain)
+                                            .foregroundStyle(index <= fragrance.rating ? .greenMain : .brownMain)
                                     }
                                 }
                             }
@@ -230,7 +230,7 @@ struct EditFragranceView: View {
                         Toggle(isOn: $fragrance.isWishlist) {
                             Text("Add to Wishlist")
                                 .font(.system(size: 16, weight: .medium))
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.brownMain)
                         }
                         .toggleStyle(CustomToggleStyle())
                         .lightFramed()

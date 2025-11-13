@@ -28,7 +28,7 @@ struct CustomPicker<ID: Hashable>: View {
     private var displayColor: Color {
         if let selection,
            options.contains(where: { $0.value == selection }) {
-            return .black
+            return .brownMain
         }
         return .brownMain.opacity(0.6)
     }
@@ -37,7 +37,7 @@ struct CustomPicker<ID: Hashable>: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
                 .font(.system(size: 14, weight: .medium))
-                .foregroundStyle(.black)
+                .foregroundStyle(.brownMain)
 
             Button {
                 guard !isDisabled, !options.isEmpty else { return }
@@ -60,7 +60,7 @@ struct CustomPicker<ID: Hashable>: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(.white)
+                        .fill(.lightBrownMain)
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
@@ -95,7 +95,7 @@ struct CustomPicker<ID: Hashable>: View {
                                     .padding(.horizontal, 16)
                                     .padding(.vertical, 14)
                                     .background(
-                                        option.value == selection ? Color.greenMain.opacity(0.08) : Color.white
+                                        option.value == selection ? Color.greenMain.opacity(0.08) : .lightBrownMain
                                     )
                                 }
                                 .buttonStyle(.plain)
@@ -130,12 +130,12 @@ struct CustomPicker<ID: Hashable>: View {
                             .padding(.vertical, 14)
                         }
                         .buttonStyle(.plain)
-                        .background(Color.white)
+                        .background(Color.lightBrownMain)
                     }
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color.white)
+                        .fill(Color.lightBrownMain)
                         .shadow(color: .brownMain.opacity(0.12), radius: 20, x: 0, y: 12)
                 )
                 .overlay(

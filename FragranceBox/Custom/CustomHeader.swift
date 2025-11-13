@@ -125,7 +125,7 @@ struct CustomHeader: View {
                 
                 Text(title)
                     .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.white)
                     .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.vertical, 20)

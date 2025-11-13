@@ -25,7 +25,7 @@ struct EditLayeringRecipeView: View {
                         VStack(alignment: .leading, spacing: 12) {
                             Text("More fragrances needed")
                                 .font(.system(size: 18, weight: .semibold))
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.brownMain)
                             Text("Add at least two fragrances to compose a layering blend.")
                                 .font(.system(size: 14, weight: .regular))
                                 .foregroundStyle(.brownMain.opacity(0.7))
@@ -36,17 +36,17 @@ struct EditLayeringRecipeView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Blend Title")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         TextField("", text: $recipe.title, prompt: Text("Name your recipe").foregroundColor(.brownMain.opacity(0.5)))
                             .font(.system(size: 16, weight: .regular))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                             .darkFramed()
                     }
 
                     VStack(alignment: .leading, spacing: 20) {
                         Text("Select Fragrances")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
 
                         VStack(spacing: 16) {
                             CustomPicker(
@@ -72,7 +72,7 @@ struct EditLayeringRecipeView: View {
                     VStack(alignment: .leading, spacing: 20) {
                         Text("Blend Ratio")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         VStack(alignment: .leading, spacing: 12) {
                             HStack {
                                 Text("Base \(Int((1 - recipe.ratio) * 100))%")
@@ -92,7 +92,7 @@ struct EditLayeringRecipeView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Aroma Goals")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
 
                         CustomPicker(
                             title: "Ambiance Setting",
@@ -143,7 +143,7 @@ struct EditLayeringRecipeView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Mood Tags")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
 
                         let columns = [GridItem(.flexible()), GridItem(.flexible())]
                         LazyVGrid(columns: columns, spacing: 12) {
@@ -158,13 +158,13 @@ struct EditLayeringRecipeView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Experiment Date")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         Button {
                             showingDatePicker = true
                         } label: {
                             HStack {
                                 Text(formatter.string(from: recipe.applyDate))
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(.brownMain)
                                     .font(.system(size: 16))
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -175,10 +175,10 @@ struct EditLayeringRecipeView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Blend Notes")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                         TextField("", text: $recipe.notes, prompt: Text("Describe projection, dry-down, or compliments").foregroundColor(.brownMain.opacity(0.5)), axis: .vertical)
                             .font(.system(size: 16, weight: .regular))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                             .lineLimit(4...8)
                             .darkFramed()
                     }
@@ -186,7 +186,7 @@ struct EditLayeringRecipeView: View {
                     Toggle(isOn: $recipe.isFavorite) {
                         Text("Mark as favorite blend")
                             .font(.system(size: 16, weight: .medium))
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.brownMain)
                     }
                     .toggleStyle(CustomToggleStyle())
                     .lightFramed()
@@ -201,7 +201,7 @@ struct EditLayeringRecipeView: View {
                             Text("Delete Blend")
                                 .font(.system(size: 16, weight: .semibold))
                                 .foregroundStyle(.white)
-                                .colorFramed(color: .red)
+                                .colorFramed(color: .greenMain)
                         }
                     }
                 }

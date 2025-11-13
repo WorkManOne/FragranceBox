@@ -17,7 +17,7 @@ extension View {
         self
             .padding(padding)
             .frame(maxWidth: .infinity)
-            .background(.white)
+            .background(.lightBrownMain)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay {
                 RoundedRectangle(cornerRadius: 10)

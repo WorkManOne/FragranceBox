@@ -31,7 +31,7 @@ struct LayeringRecipePreviewView: View {
                     )
                 Text(recipe.title.isEmpty ? "New Layer" : recipe.title)
                     .font(.system(size: 18, weight: .semibold))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.brownMain)
                     .multilineTextAlignment(.leading)
                 Spacer()
                 VStack(alignment: .trailing, spacing: 4) {
